@@ -13,7 +13,8 @@ def print_menu() -> None:
     print("2 - Проверка камеры (просмотр видео)")
     print("3 - Проверка разрешений и измерение FPS")
     print("4 - Обнаружение движения")
-    print("5 - Сравнение 2 разрешений с камерой")
+    print("5 - Сравнение 2 разрешений с отображением камеры")
+    print("6 - Тестирование 4-х режимов без отображения камеры")
     print("0 - Выход из программы")
 
 
@@ -24,7 +25,7 @@ def main() -> None:
         "3": cameraModes.run,
         "4": motionDetection.run,
         "5": compareResolution.run,
-        "6": camera4Modes
+        "6": camera4Modes.run
     }
 
     while True:
@@ -38,6 +39,7 @@ def main() -> None:
         if choice == "0":
             print("Работа программы завершена.")
             break
+
 
         action = actions.get(choice)
         if action is None:
