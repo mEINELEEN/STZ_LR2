@@ -65,3 +65,4 @@ def run() -> None:
         close_camera(camera)
 
     print("Проверка режимов завершена. Возврат в меню.")
+

@@ -1,5 +1,5 @@
 """Главное меню лабораторной работы № 2. Остальная логика вынесена в отдельные модули."""
-
+import camera4Modes
 import cameraProperties
 import cameraTest
 import cameraModes
@@ -8,12 +8,13 @@ import compareResolution
 
 
 def print_menu() -> None:
-    print("\n========== ЛАБОРАТОРНАЯ РАБОТА № 2 ==========")
+    print("\nМеню лабораторной работы")
     print("1 - Настройка камеры")
     print("2 - Проверка камеры (просмотр видео)")
     print("3 - Проверка разрешений и измерение FPS")
     print("4 - Обнаружение движения")
-    print("5 - Сравнение разрешений")
+    print("5 - Сравнение 2 разрешений с камерой")
+    print("6 - Сравнение 4 разрешений без камеры")
     print("0 - Выход из программы")
 
 
@@ -24,6 +25,7 @@ def main() -> None:
         "3": cameraModes.run,
         "4": motionDetection.run,
         "5": compareResolution.run,
+        "6": camera4Modes
     }
 
     while True:
